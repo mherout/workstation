@@ -15,8 +15,24 @@ describe port(80) do
   it { should_not be_listening }
 end
 
+
 #####  primeira toma de contacto con InSpec #####
 describe package ("tree") do
  it { should be_installed }
+end
+
+##### evitar puertos telnet #####
+describe port(22) do
+  it { should_not be_listening }
+end
+
+###### para comprobar o motd #####
+describe file ('/etc/motd') do
+ its('content') { should match(/Property of/) }
+end
+
+###### para comprobar o motd #####
+describe file ('/etc/motd') do
+ its('content') { should match(/Propiedade de manolez corporation/) }
 end
 
