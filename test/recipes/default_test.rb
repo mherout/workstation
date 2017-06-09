@@ -26,13 +26,25 @@ describe port(22) do
   it { should_not be_listening }
 end
 
-###### para comprobar o motd #####
-describe file ('/etc/motd') do
- its('content') { should match(/Property of/) }
+
+##### evitar puertos ftp #####
+describe port(20) do
+  it { should_not be_listening }
 end
 
-###### para comprobar o motd #####
+describe port(21) do
+  it { should_not be_listening }
+end
+
+
+#####  puertos ssh permitido #####
+describe port(22) do
+  it { should_not be_listening }
+end
+
+###### para comprobar o motd e propietario root #####
 describe file ('/etc/motd') do
  its('content') { should match(/Propiedade de manolez corporation/) }
+ it { should be_owned_by "root" }
 end
 
