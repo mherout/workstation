@@ -3,6 +3,6 @@
 # Recipe:: default
 #
 # Copyright (c) 2017 The Authors, All Rights Reserved.
-# para incluir "setup" en 
+# para lanzar la receta dende default
 
 include_recipe "workstation::setup"
