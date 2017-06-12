@@ -3,12 +3,20 @@
 #
 #
 package "tree"
+# 
+#Cambios en el banner de inicio para tomar datos de la VM sacados de ohai
 
-# Cambios de usuarios y grupos
-#
 file "/etc/motd"  do
-content "Propiedade de manolez corporation"
+content "Property of ...
 
+IPADDRESS: #{node['ipaddress']}
+HOSTNAME: #{node['hostname']}
+MEMORY: #{node['memory']['total']}
+CPU: #{node['cpu']['0']['mhz']}
+
+"
+
+ mode "0644"
  owner "root"
  group "root"
 end

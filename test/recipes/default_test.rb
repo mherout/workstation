@@ -44,7 +44,7 @@ end
 
 ###### para comprobar o motd e propietario root #####
 describe file ('/etc/motd') do
- its('content') { should match(/Propiedade de manolez corporation/) }
+ its('content') { should match(/Property of .../) }
  it { should be_owned_by "root" }
 end
 
