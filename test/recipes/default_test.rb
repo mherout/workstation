@@ -22,9 +22,9 @@ describe package ("tree") do
 end
 
 ##### evitar puertos telnet #####
-describe port(22) do
-  it { should_not be_listening }
-end
+#describe port(22) do
+#  it { should_not be_listening }
+#end
 
 
 ##### evitar puertos ftp #####
@@ -39,7 +39,7 @@ end
 
 #####  puertos ssh permitido #####
 describe port(22) do
-  it { should_not be_listening }
+  it { should be_listening }
 end
 
 ###### para comprobar o motd e propietario root #####

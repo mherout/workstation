@@ -1,9 +1,11 @@
 name 'workstation'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'mherout'
+maintainer_email 'carrofeito@hotmail.com'
 license 'all_rights'
 description 'Installs/Configures workstation'
 long_description 'Installs/Configures workstation'
+
+# VERSIONES QUE VAMOS SACANDO #
 version '0.2.0'
 
 # If you upload to Supermarket you should set this so your cookbook
